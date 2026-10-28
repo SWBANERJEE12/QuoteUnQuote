@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFF9F5">
+    <meta name="description" content="Your favourite quotes, saved in one place.">
+    <title>My Favourites — Quote Unquote</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="favourites.js" defer></script>
+</head>
+
+<body>
+    <div class="page-shell favourites-page">
+
+        <header class="topbar">
+            <a class="brand" href="index.html" aria-label="Quote Unquote home">
+                <span class="brand-mark">q.</span>
+                <span>QUOTE UNQUOTE<span class="brand-dot">®</span></span>
+            </a>
+            <a href="index.html" class="back-to-quotes-btn">
+            ← BACK TO QUOTES
+            </a>
+        </header>
+        <main>
+            <section class="hero favourites-hero">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    YOUR PERSONAL COLLECTION
+                </div>
+
+                <h1>Your favourite<br><span class="headline-accent">thoughts.</span></h1>
+
+                <p class="intro">
+                    The words you chose to keep. All in one little place.
+                </p>
+            </section>
+
+            <section class="favourites-section">
+                <div class="favourites-heading">
+                    <h2>THE KEEPER'S CLUB <span aria-hidden="true">♥</span></h2>
+                    <span id="favouriteCount">0 SAVED</span>
+                </div>
+
+                <div id="favouritesGrid" class="favourites-grid"></div>
+
+                <div id="emptyFavourites" class="empty-favourites" hidden>
+                    <span class="empty-heart" aria-hidden="true">♡</span>
+                    <h2>Nothing to keep. Yet.</h2>
+                    <p>
+                        When a quote speaks to you, give that little heart a pull
+                        and save it here.
+                    </p>
+                    <a class="new-quote-button empty-cta" href="index.html">
+                        FIND YOUR FIRST FAVOURITE ↗
+                    </a>
+                </div>
+            </section>
+
+            <section class="bottom-strip">
+                <div class="strip-block">
+                    <span class="strip-label">01 / COLLECTION</span>
+                    <span class="strip-value">YOUR WORDS</span>
+                </div>
+
+                <div class="strip-block">
+                    <span class="strip-label">02 / SAVED LOCALLY</span>
+                    <span class="strip-value">JUST FOR THIS BROWSER</span>
+                </div>
+
+                <div class="strip-block strip-message">
+                    <span class="strip-label">A FRIENDLY REMINDER</span>
+                    <span class="strip-value">KEEP WHAT MOVES YOU.</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>QUOTE UNQUOTE <span class="footer-copyright">© 2026</span></span>
+            <span>MADE TO MAKE YOU THINK <span class="footer-heart">✳</span></span>
+        </footer>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    </div>
+</body>
+</html>

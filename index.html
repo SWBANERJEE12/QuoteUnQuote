@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8efe4" />
+  <meta name="description" content="A little inspiration, one quote at a time." />
+  <title>Quote Unquote — Random Quote Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="favourites.html" class="favourites-top-btn">
+        Favourites
+        </a>
+      <a class="brand" href="#" aria-label="Quote Club home">
+        <span class="brand-mark">q.</span>
+        <span>QUOTE UNQUOTE<span class="brand-dot">®</span></span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE INTERNET'S TINY WISDOM MACHINE</div>
+        <h1 id="heroTitle">
+        <span id="titleLine1"></span><br>
+        <span class="headline-accent" id="titleLine2"></span><span class="typing-cursor" id="typingCursor"></span>
+        </h1>
+        <p class="intro">Big ideas. Small screen. Take what you need, carry it with you.</p>
+      </section>
+
+      <section class="quote-layout" aria-live="polite">
+        <div class="side-note">
+          <span class="side-index">01 — PAUSE</span>
+          <span class="side-vertical">WORDS TO RETURN TO</span>
+          <span class="side-star">✳</span>
+        </div>
+        <article class="quote-card">
+          <div class="card-topline">
+            <span class="card-label"><span class="mini-square"></span> TODAY'S RANDOM THOUGHT</span>
+            <span class="quote-number" id="quoteNumber">QUOTE / 001</span>
+          </div>
+          <div class="quote-content" id="quoteContent">
+            <span class="quote-symbol" aria-hidden="true">“</span>
+            <p class="quote-text" id="quoteText">Great things are done by a series of small things brought together.</p>
+            <div class="quote-author-row">
+              <span class="author-rule"></span>
+              <p class="quote-author" id="quoteAuthor">Vincent van Gogh</p>
+            </div>
+          </div>
+          <div class="loading-state" id="loadingState" hidden>
+            <span class="loader"></span>
+            <p>Finding a thought for you<span class="loading-dots">...</span></p>
+          </div>
+          <div class="error-state" id="errorState" hidden>
+            <span class="error-icon">!</span>
+            <p class="error-title">The words got lost.</p>
+            <p class="error-copy" id="errorMessage">We couldn't reach the quote service. Check your connection and try again.</p>
+            <button class="text-button" id="retryButton" type="button">Try again ↗</button>
+          </div>
+          <div class="card-footer">
+            <span class="footer-note">LET IT SIT WITH YOU.</span>
+            <div class="card-actions">
+              <button
+                class="icon-button copy-icon-button"
+                id="copyButton"
+                type="button"
+                aria-label="Copy quote"
+                title="Copy quote"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                <path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 8 16"></path>
+                </svg>
+              </button>
+              <button
+                class="slingshot-button"
+                id="favouriteButton"
+                type="button"
+                aria-label="Add quote to favourites"
+                title="Add to favourites"
+                >
+                <span class="slingshot-band"></span>
+                <span class="slingshot-heart">♥</span>
+                </button>
+              <button class="new-quote-button" id="newQuoteButton" type="button">
+                <span class="button-spark">✳</span> NEW QUOTE <span class="button-arrow">↗</span>
+              </button>
+            </div>
+          </div>
+        </article>
+<div class="right-stamp">
+    <button class="category-button active" data-category="All" type="button">
+        ALL
+    </button>
+    <button class="category-button" data-category="TV Shows" type="button">
+        TV SHOWS
+    </button>
+    <button class="category-button" data-category="Anime" type="button">
+        ANIME
+    </button>
+    <button class="category-button" data-category="Cartoons" type="button">
+        CARTOONS
+    </button>
+    <button class="category-button" data-category="Games" type="button">
+        GAMES
+    </button>
+    <button class="category-button" data-category="Movies" type="button">
+        MOVIES
+    </button>
+</div>
+      </section>
+
+      <section class="bottom-strip">
+        <div class="strip-block"><span class="strip-label">01 / BUILT FOR</span><span class="strip-value">CURIOUS MINDS</span></div>
+        <div class="strip-block"><span class="strip-label">02 / POWERED BY</span><span class="strip-value">A PUBLIC QUOTE API</span></div>
+        <div class="strip-block strip-message"><span class="strip-label">A FRIENDLY REMINDER</span><span class="strip-value">YOU'RE ALLOWED TO START AGAIN.</span></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>QUOTE UNQUOTE <span class="footer-copyright">© 2026</span></span>
+      <span>MADE TO MAKE YOU THINK <span class="footer-heart">✳</span></span>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
